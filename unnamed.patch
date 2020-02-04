@@ -1,0 +1,1568 @@
+Index: gmall_user/src/main/java/com/lxkj/gmall/gmall_user/service/impl/UmsMemberReceiveAddressServiceImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gmall_user/src/main/java/com/lxkj/gmall/gmall_user/service/impl/UmsMemberReceiveAddressServiceImpl.java	(date 1580724678614)
++++ gmall_user/src/main/java/com/lxkj/gmall/gmall_user/service/impl/UmsMemberReceiveAddressServiceImpl.java	(date 1580724678614)
+@@ -0,0 +1,21 @@
++package com.lxkj.gmall.gmall_user.service.impl;
++
++import com.lxkj.gmall.bean.UmsMemberReceiveAddress;
++import com.lxkj.gmall.gmall_user.mapper.UmsMemberReceiveAddressMapper;
++import com.lxkj.gmall.service.UmsMemberReceiveAddressService;
++import org.springframework.stereotype.Service;
++
++import javax.annotation.Resource;
++import java.util.List;
++
++@Service
++public class UmsMemberReceiveAddressServiceImpl implements UmsMemberReceiveAddressService {
++
++    @Resource
++    private UmsMemberReceiveAddressMapper umsMemberReceiveAddressMapper;
++
++    @Override
++    public List<UmsMemberReceiveAddress> getUserAll() {
++        return umsMemberReceiveAddressMapper.getUserAll();
++    }
++}
+Index: gmall_user_service/src/test/java/com/lxkj/gmall/gmall_user_service/GmallUserServiceApplicationTests.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gmall_user_service/src/test/java/com/lxkj/gmall/gmall_user_service/GmallUserServiceApplicationTests.java	(date 1580787370254)
++++ gmall_user_service/src/test/java/com/lxkj/gmall/gmall_user_service/GmallUserServiceApplicationTests.java	(date 1580787370254)
+@@ -0,0 +1,13 @@
++package com.lxkj.gmall.gmall_user_service;
++
++import org.junit.jupiter.api.Test;
++import org.springframework.boot.test.context.SpringBootTest;
++
++@SpringBootTest
++class GmallUserServiceApplicationTests {
++
++    @Test
++    void contextLoads() {
++    }
++
++}
+Index: gmall_api/gmall_api.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gmall_api/gmall_api.iml	(date 1580787864460)
++++ gmall_api/gmall_api.iml	(date 1580787864460)
+@@ -0,0 +1,42 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
++  <component name="FacetManager">
++    <facet type="Spring" name="Spring">
++      <configuration />
++    </facet>
++  </component>
++  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5">
++    <output url="file://$MODULE_DIR$/target/classes" />
++    <output-test url="file://$MODULE_DIR$/target/test-classes" />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
++      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
++      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
++      <excludeFolder url="file://$MODULE_DIR$/target" />
++    </content>
++    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
++    <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="library" name="Maven: tk.mybatis:mapper-spring-boot-starter:1.2.3" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:1.5.9.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:1.5.9.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-context:4.3.13.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.3.13.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-beans:4.3.13.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-expression:4.3.13.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:1.5.9.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-logging:1.5.9.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:1.1.11" level="project" />
++    <orderEntry type="library" name="Maven: ch.qos.logback:logback-core:1.1.11" level="project" />
++    <orderEntry type="library" name="Maven: org.slf4j:jcl-over-slf4j:1.7.25" level="project" />
++    <orderEntry type="library" name="Maven: org.slf4j:jul-to-slf4j:1.7.25" level="project" />
++    <orderEntry type="library" name="Maven: org.slf4j:log4j-over-slf4j:1.7.25" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-core:4.3.13.RELEASE" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: org.yaml:snakeyaml:1.17" level="project" />
++    <orderEntry type="library" name="Maven: org.mybatis:mybatis:3.4.5" level="project" />
++    <orderEntry type="library" name="Maven: org.mybatis:mybatis-spring:1.3.1" level="project" />
++    <orderEntry type="library" name="Maven: tk.mybatis:mapper-spring-boot-autoconfigure:1.2.3" level="project" />
++    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.25" level="project" />
++    <orderEntry type="library" name="Maven: tk.mybatis:mapper:3.5.2" level="project" />
++    <orderEntry type="library" name="Maven: javax.persistence:persistence-api:1.0" level="project" />
++  </component>
++</module>
+\ No newline at end of file
+Index: gmall_common_util/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gmall_common_util/pom.xml	(date 1580787829150)
++++ gmall_common_util/pom.xml	(date 1580787829150)
+@@ -0,0 +1,48 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0"
++         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
++    <modelVersion>4.0.0</modelVersion>
++
++    <groupId>com.lxkj.gmall</groupId>
++    <artifactId>gmall_common_util</artifactId>
++    <version>1.0-SNAPSHOT</version>
++
++    <parent>
++        <groupId>com.lxkj.gmall</groupId>
++        <artifactId>gmall_parent</artifactId>
++        <version>1.0-SNAPSHOT</version>
++    </parent>
++    <dependencies>
++        <dependency>
++            <groupId>com.alibaba</groupId>
++            <artifactId>fastjson</artifactId>
++        </dependency>
++        <dependency>
++            <groupId>org.springframework.boot</groupId>
++            <artifactId>spring-boot-starter-test</artifactId>
++        </dependency>
++        <dependency>
++            <groupId>org.springframework.boot</groupId>
++            <artifactId>spring-boot-starter-web</artifactId>
++        </dependency>
++        <dependency>
++            <groupId>org.apache.httpcomponents</groupId>
++            <artifactId>httpclient</artifactId>
++        </dependency>
++        <dependency>
++            <groupId>org.apache.commons</groupId>
++            <artifactId>commons-lang3</artifactId>
++        </dependency>
++        <dependency>
++            <groupId>commons-beanutils</groupId>
++            <artifactId>commons-beanutils</artifactId>
++        </dependency>
++        <dependency>
++            <groupId>commons-codec</groupId>
++            <artifactId>commons-codec</artifactId>
++        </dependency>
++    </dependencies>
++
++    
++</project>
+\ No newline at end of file
+Index: gmall_parent/gmall_parent.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gmall_parent/gmall_parent.iml	(date 1580787423630)
++++ gmall_parent/gmall_parent.iml	(date 1580787423630)
+@@ -0,0 +1,15 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
++    <output url="file://$MODULE_DIR$/target/classes" />
++    <output-test url="file://$MODULE_DIR$/target/test-classes" />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
++      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
++      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
++      <excludeFolder url="file://$MODULE_DIR$/target" />
++    </content>
++    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: gmall_web_util/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gmall_web_util/pom.xml	(date 1580787819265)
++++ gmall_web_util/pom.xml	(date 1580787819265)
+@@ -0,0 +1,29 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0"
++         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
++    <modelVersion>4.0.0</modelVersion>
++
++    <groupId>com.lxkj.gmall</groupId>
++    <artifactId>gmall_web_util</artifactId>
++    <version>1.0-SNAPSHOT</version>
++
++    <parent>
++        <groupId>com.lxkj.gmall</groupId>
++        <artifactId>gmall_parent</artifactId>
++        <version>1.0-SNAPSHOT</version>
++    </parent>
++    <dependencies>
++        <dependency>
++            <groupId>com.lxkj.gmall</groupId>
++            <artifactId>gmall_common_util</artifactId>
++            <version>1.0-SNAPSHOT</version>
++        </dependency>
++        <dependency>
++            <groupId>org.springframework.boot</groupId>
++            <artifactId>spring-boot-starter-thymeleaf</artifactId>
++        </dependency>
++    </dependencies>
++
++    
++</project>
+\ No newline at end of file
+Index: gmall_user/src/main/java/com/lxkj/gmall/gmall_user/controller/UmsMemberReceiveAddressController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gmall_user/src/main/java/com/lxkj/gmall/gmall_user/controller/UmsMemberReceiveAddressController.java	(date 1580723107217)
++++ gmall_user/src/main/java/com/lxkj/gmall/gmall_user/controller/UmsMemberReceiveAddressController.java	(date 1580723107217)
+@@ -0,0 +1,20 @@
++package com.lxkj.gmall.gmall_user.controller;
++
++import com.lxkj.gmall.service.UmsMemberReceiveAddressService;
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.stereotype.Controller;
++import org.springframework.web.bind.annotation.RequestMapping;
++import org.springframework.web.bind.annotation.ResponseBody;
++
++@Controller
++public class UmsMemberReceiveAddressController {
++
++    @Autowired
++    private UmsMemberReceiveAddressService memberReceiveAddressService;
++
++    @RequestMapping(value = "/index")
++    @ResponseBody
++    public Object index(){
++        return memberReceiveAddressService.getUserAll();
++    }
++}
+Index: demo/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- demo/pom.xml	(date 1580787122660)
++++ demo/pom.xml	(date 1580787122660)
+@@ -0,0 +1,49 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
++    <modelVersion>4.0.0</modelVersion>
++    <parent>
++        <groupId>org.springframework.boot</groupId>
++        <artifactId>spring-boot-starter-parent</artifactId>
++        <version>2.2.4.RELEASE</version>
++        <relativePath/> <!-- lookup parent from repository -->
++    </parent>
++    <groupId>com.lxkj.gmall</groupId>
++    <artifactId>demo</artifactId>
++    <version>0.0.1-SNAPSHOT</version>
++    <name>demo</name>
++    <description>Demo project for Spring Boot</description>
++
++    <properties>
++        <java.version>1.8</java.version>
++    </properties>
++
++    <dependencies>
++        <dependency>
++            <groupId>org.springframework.boot</groupId>
++            <artifactId>spring-boot-starter-web</artifactId>
++        </dependency>
++
++        <dependency>
++            <groupId>org.springframework.boot</groupId>
++            <artifactId>spring-boot-starter-test</artifactId>
++            <scope>test</scope>
++            <exclusions>
++                <exclusion>
++                    <groupId>org.junit.vintage</groupId>
++                    <artifactId>junit-vintage-engine</artifactId>
++                </exclusion>
++            </exclusions>
++        </dependency>
++    </dependencies>
++
++    <build>
++        <plugins>
++            <plugin>
++                <groupId>org.springframework.boot</groupId>
++                <artifactId>spring-boot-maven-plugin</artifactId>
++            </plugin>
++        </plugins>
++    </build>
++
++</project>
+Index: gmall_user/src/main/java/com/lxkj/gmall/gmall_user/mapper/UmsMemberReceiveAddressMapper.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gmall_user/src/main/java/com/lxkj/gmall/gmall_user/mapper/UmsMemberReceiveAddressMapper.java	(date 1580724971957)
++++ gmall_user/src/main/java/com/lxkj/gmall/gmall_user/mapper/UmsMemberReceiveAddressMapper.java	(date 1580724971957)
+@@ -0,0 +1,12 @@
++package com.lxkj.gmall.gmall_user.mapper;
++
++
++import com.lxkj.gmall.bean.UmsMemberReceiveAddress;
++import tk.mybatis.mapper.common.Mapper;
++
++import java.util.List;
++
++public interface UmsMemberReceiveAddressMapper extends Mapper<UmsMemberReceiveAddress> {
++
++    List<UmsMemberReceiveAddress> getUserAll();
++}
+Index: gmall1902.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gmall1902.iml	(date 1580787084798)
++++ gmall1902.iml	(date 1580787084798)
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="WEB_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$" />
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: gmall_api/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gmall_api/pom.xml	(date 1580787441621)
++++ gmall_api/pom.xml	(date 1580787441621)
+@@ -0,0 +1,27 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0"
++         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
++    <modelVersion>4.0.0</modelVersion>
++
++    <groupId>com.lxkj.gmall</groupId>
++    <artifactId>gmall_api</artifactId>
++    <version>1.0-SNAPSHOT</version>
++
++    <dependencies>
++        <!--  通用mapper  -->
++        <dependency>
++            <groupId>tk.mybatis</groupId>
++            <artifactId>mapper-spring-boot-starter</artifactId>
++            <version>1.2.3</version>
++            <exclusions>
++                <exclusion>
++                    <groupId>org.springframework.boot</groupId>
++                    <artifactId>spring-boot-starter-jdbc</artifactId>
++                </exclusion>
++            </exclusions>
++        </dependency>
++    </dependencies>
++
++    
++</project>
+\ No newline at end of file
+Index: gmall_servicer_util/gmall_servicer_util.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gmall_servicer_util/gmall_servicer_util.iml	(date 1580788595934)
++++ gmall_servicer_util/gmall_servicer_util.iml	(date 1580788595934)
+@@ -0,0 +1,116 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
++  <component name="FacetManager">
++    <facet type="Spring" name="Spring">
++      <configuration />
++    </facet>
++    <facet type="web" name="Web">
++      <configuration>
++        <webroots />
++        <sourceRoots>
++          <root url="file://$MODULE_DIR$/src/main/java" />
++          <root url="file://$MODULE_DIR$/src/main/resources" />
++        </sourceRoots>
++      </configuration>
++    </facet>
++  </component>
++  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
++    <output url="file://$MODULE_DIR$/target/classes" />
++    <output-test url="file://$MODULE_DIR$/target/test-classes" />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
++      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
++      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
++      <excludeFolder url="file://$MODULE_DIR$/target" />
++    </content>
++    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
++    <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="module" module-name="gmall_common_util" />
++    <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.46" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-test:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-test:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-test-autoconfigure:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: com.jayway.jsonpath:json-path:2.4.0" level="project" />
++    <orderEntry type="library" name="Maven: net.minidev:json-smart:2.3" level="project" />
++    <orderEntry type="library" name="Maven: net.minidev:accessors-smart:1.2" level="project" />
++    <orderEntry type="library" name="Maven: org.ow2.asm:asm:5.0.4" level="project" />
++    <orderEntry type="library" name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:2.3.2" level="project" />
++    <orderEntry type="library" name="Maven: jakarta.activation:jakarta.activation-api:1.2.1" level="project" />
++    <orderEntry type="library" name="Maven: org.junit.jupiter:junit-jupiter:5.5.2" level="project" />
++    <orderEntry type="library" name="Maven: org.junit.jupiter:junit-jupiter-api:5.5.2" level="project" />
++    <orderEntry type="library" name="Maven: org.opentest4j:opentest4j:1.2.0" level="project" />
++    <orderEntry type="library" name="Maven: org.junit.platform:junit-platform-commons:1.5.2" level="project" />
++    <orderEntry type="library" name="Maven: org.junit.jupiter:junit-jupiter-params:5.5.2" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.5.2" level="project" />
++    <orderEntry type="library" name="Maven: org.junit.vintage:junit-vintage-engine:5.5.2" level="project" />
++    <orderEntry type="library" name="Maven: org.apiguardian:apiguardian-api:1.1.0" level="project" />
++    <orderEntry type="library" name="Maven: org.junit.platform:junit-platform-engine:1.5.2" level="project" />
++    <orderEntry type="library" name="Maven: junit:junit:4.12" level="project" />
++    <orderEntry type="library" name="Maven: org.mockito:mockito-junit-jupiter:3.1.0" level="project" />
++    <orderEntry type="library" name="Maven: org.assertj:assertj-core:3.13.2" level="project" />
++    <orderEntry type="library" name="Maven: org.hamcrest:hamcrest:2.1" level="project" />
++    <orderEntry type="library" name="Maven: org.mockito:mockito-core:3.1.0" level="project" />
++    <orderEntry type="library" name="Maven: net.bytebuddy:byte-buddy:1.10.6" level="project" />
++    <orderEntry type="library" name="Maven: net.bytebuddy:byte-buddy-agent:1.10.6" level="project" />
++    <orderEntry type="library" name="Maven: org.objenesis:objenesis:2.6" level="project" />
++    <orderEntry type="library" name="Maven: org.skyscreamer:jsonassert:1.5.0" level="project" />
++    <orderEntry type="library" name="Maven: com.vaadin.external.google:android-json:0.0.20131108.vaadin1" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-core:5.2.3.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-jcl:5.2.3.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-test:5.2.3.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.xmlunit:xmlunit-core:2.6.3" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-json:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.10.2" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.10.2" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.10.2" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.10.2" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.10.2" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-parameter-names:2.10.2" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-tomcat:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:9.0.30" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-el:9.0.30" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-websocket:9.0.30" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-validation:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: jakarta.validation:jakarta.validation-api:2.0.2" level="project" />
++    <orderEntry type="library" name="Maven: org.hibernate.validator:hibernate-validator:6.0.18.Final" level="project" />
++    <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging:3.4.1.Final" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml:classmate:1.5.1" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-web:5.2.3.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:5.2.3.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-aop:5.2.3.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-context:5.2.3.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.2.3.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5.5" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.13" level="project" />
++    <orderEntry type="library" name="Maven: commons-logging:commons-logging:1.2" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.7" level="project" />
++    <orderEntry type="library" name="Maven: commons-beanutils:commons-beanutils:1.9.3" level="project" />
++    <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.2.2" level="project" />
++    <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.13" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-jdbc:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-logging:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:1.2.3" level="project" />
++    <orderEntry type="library" name="Maven: ch.qos.logback:logback-core:1.2.3" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-to-slf4j:2.12.1" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-api:2.12.1" level="project" />
++    <orderEntry type="library" name="Maven: org.slf4j:jul-to-slf4j:1.7.30" level="project" />
++    <orderEntry type="library" name="Maven: jakarta.annotation:jakarta.annotation-api:1.3.5" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: org.yaml:snakeyaml:1.25" level="project" />
++    <orderEntry type="library" name="Maven: com.zaxxer:HikariCP:3.4.2" level="project" />
++    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.30" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:5.2.3.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-beans:5.2.3.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-tx:5.2.3.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.1" level="project" />
++    <orderEntry type="library" name="Maven: org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:2.1.1" level="project" />
++    <orderEntry type="library" name="Maven: org.mybatis:mybatis:3.5.3" level="project" />
++    <orderEntry type="library" name="Maven: org.mybatis:mybatis-spring:2.0.3" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: mysql:mysql-connector-java:8.0.19" level="project" />
++    <orderEntry type="library" name="Maven: redis.clients:jedis:2.9.0" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.commons:commons-pool2:2.7.0" level="project" />
++  </component>
++</module>
+\ No newline at end of file
+Index: gmall_common_util/gmall_common_util.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gmall_common_util/gmall_common_util.iml	(date 1580787864470)
++++ gmall_common_util/gmall_common_util.iml	(date 1580787864470)
+@@ -0,0 +1,104 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
++  <component name="FacetManager">
++    <facet type="Spring" name="Spring">
++      <configuration />
++    </facet>
++    <facet type="web" name="Web">
++      <configuration>
++        <webroots />
++        <sourceRoots>
++          <root url="file://$MODULE_DIR$/src/main/java" />
++          <root url="file://$MODULE_DIR$/src/main/resources" />
++        </sourceRoots>
++      </configuration>
++    </facet>
++  </component>
++  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
++    <output url="file://$MODULE_DIR$/target/classes" />
++    <output-test url="file://$MODULE_DIR$/target/test-classes" />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
++      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
++      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
++      <excludeFolder url="file://$MODULE_DIR$/target" />
++    </content>
++    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
++    <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.46" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-test:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-logging:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:1.2.3" level="project" />
++    <orderEntry type="library" name="Maven: ch.qos.logback:logback-core:1.2.3" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-to-slf4j:2.12.1" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-api:2.12.1" level="project" />
++    <orderEntry type="library" name="Maven: org.slf4j:jul-to-slf4j:1.7.30" level="project" />
++    <orderEntry type="library" name="Maven: jakarta.annotation:jakarta.annotation-api:1.3.5" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: org.yaml:snakeyaml:1.25" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-test:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-test-autoconfigure:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: com.jayway.jsonpath:json-path:2.4.0" level="project" />
++    <orderEntry type="library" name="Maven: net.minidev:json-smart:2.3" level="project" />
++    <orderEntry type="library" name="Maven: net.minidev:accessors-smart:1.2" level="project" />
++    <orderEntry type="library" name="Maven: org.ow2.asm:asm:5.0.4" level="project" />
++    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.30" level="project" />
++    <orderEntry type="library" name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:2.3.2" level="project" />
++    <orderEntry type="library" name="Maven: jakarta.activation:jakarta.activation-api:1.2.1" level="project" />
++    <orderEntry type="library" name="Maven: org.junit.jupiter:junit-jupiter:5.5.2" level="project" />
++    <orderEntry type="library" name="Maven: org.junit.jupiter:junit-jupiter-api:5.5.2" level="project" />
++    <orderEntry type="library" name="Maven: org.opentest4j:opentest4j:1.2.0" level="project" />
++    <orderEntry type="library" name="Maven: org.junit.platform:junit-platform-commons:1.5.2" level="project" />
++    <orderEntry type="library" name="Maven: org.junit.jupiter:junit-jupiter-params:5.5.2" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.5.2" level="project" />
++    <orderEntry type="library" name="Maven: org.junit.vintage:junit-vintage-engine:5.5.2" level="project" />
++    <orderEntry type="library" name="Maven: org.apiguardian:apiguardian-api:1.1.0" level="project" />
++    <orderEntry type="library" name="Maven: org.junit.platform:junit-platform-engine:1.5.2" level="project" />
++    <orderEntry type="library" name="Maven: junit:junit:4.12" level="project" />
++    <orderEntry type="library" name="Maven: org.mockito:mockito-junit-jupiter:3.1.0" level="project" />
++    <orderEntry type="library" name="Maven: org.assertj:assertj-core:3.13.2" level="project" />
++    <orderEntry type="library" name="Maven: org.hamcrest:hamcrest:2.1" level="project" />
++    <orderEntry type="library" name="Maven: org.mockito:mockito-core:3.1.0" level="project" />
++    <orderEntry type="library" name="Maven: net.bytebuddy:byte-buddy:1.10.6" level="project" />
++    <orderEntry type="library" name="Maven: net.bytebuddy:byte-buddy-agent:1.10.6" level="project" />
++    <orderEntry type="library" name="Maven: org.objenesis:objenesis:2.6" level="project" />
++    <orderEntry type="library" name="Maven: org.skyscreamer:jsonassert:1.5.0" level="project" />
++    <orderEntry type="library" name="Maven: com.vaadin.external.google:android-json:0.0.20131108.vaadin1" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-core:5.2.3.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-jcl:5.2.3.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-test:5.2.3.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.xmlunit:xmlunit-core:2.6.3" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-json:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.10.2" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.10.2" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.10.2" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.10.2" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.10.2" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-parameter-names:2.10.2" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-tomcat:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:9.0.30" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-el:9.0.30" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-websocket:9.0.30" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-validation:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: jakarta.validation:jakarta.validation-api:2.0.2" level="project" />
++    <orderEntry type="library" name="Maven: org.hibernate.validator:hibernate-validator:6.0.18.Final" level="project" />
++    <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging:3.4.1.Final" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml:classmate:1.5.1" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-web:5.2.3.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-beans:5.2.3.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:5.2.3.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-aop:5.2.3.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-context:5.2.3.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.2.3.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5.5" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.13" level="project" />
++    <orderEntry type="library" name="Maven: commons-logging:commons-logging:1.2" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.7" level="project" />
++    <orderEntry type="library" name="Maven: commons-beanutils:commons-beanutils:1.9.3" level="project" />
++    <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.2.2" level="project" />
++    <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.13" level="project" />
++  </component>
++</module>
+\ No newline at end of file
+Index: gmall_web_util/gmall_web_util.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gmall_web_util/gmall_web_util.iml	(date 1580788497225)
++++ gmall_web_util/gmall_web_util.iml	(date 1580788497225)
+@@ -0,0 +1,111 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
++  <component name="FacetManager">
++    <facet type="Spring" name="Spring">
++      <configuration />
++    </facet>
++    <facet type="web" name="Web">
++      <configuration>
++        <webroots />
++        <sourceRoots>
++          <root url="file://$MODULE_DIR$/src/main/java" />
++          <root url="file://$MODULE_DIR$/src/main/resources" />
++        </sourceRoots>
++      </configuration>
++    </facet>
++  </component>
++  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
++    <output url="file://$MODULE_DIR$/target/classes" />
++    <output-test url="file://$MODULE_DIR$/target/test-classes" />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
++      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
++      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
++      <excludeFolder url="file://$MODULE_DIR$/target" />
++    </content>
++    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
++    <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="module" module-name="gmall_common_util" />
++    <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.46" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-test:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-test:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-test-autoconfigure:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: com.jayway.jsonpath:json-path:2.4.0" level="project" />
++    <orderEntry type="library" name="Maven: net.minidev:json-smart:2.3" level="project" />
++    <orderEntry type="library" name="Maven: net.minidev:accessors-smart:1.2" level="project" />
++    <orderEntry type="library" name="Maven: org.ow2.asm:asm:5.0.4" level="project" />
++    <orderEntry type="library" name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:2.3.2" level="project" />
++    <orderEntry type="library" name="Maven: jakarta.activation:jakarta.activation-api:1.2.1" level="project" />
++    <orderEntry type="library" name="Maven: org.junit.jupiter:junit-jupiter:5.5.2" level="project" />
++    <orderEntry type="library" name="Maven: org.junit.jupiter:junit-jupiter-api:5.5.2" level="project" />
++    <orderEntry type="library" name="Maven: org.opentest4j:opentest4j:1.2.0" level="project" />
++    <orderEntry type="library" name="Maven: org.junit.platform:junit-platform-commons:1.5.2" level="project" />
++    <orderEntry type="library" name="Maven: org.junit.jupiter:junit-jupiter-params:5.5.2" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.5.2" level="project" />
++    <orderEntry type="library" name="Maven: org.junit.vintage:junit-vintage-engine:5.5.2" level="project" />
++    <orderEntry type="library" name="Maven: org.apiguardian:apiguardian-api:1.1.0" level="project" />
++    <orderEntry type="library" name="Maven: org.junit.platform:junit-platform-engine:1.5.2" level="project" />
++    <orderEntry type="library" name="Maven: junit:junit:4.12" level="project" />
++    <orderEntry type="library" name="Maven: org.mockito:mockito-junit-jupiter:3.1.0" level="project" />
++    <orderEntry type="library" name="Maven: org.assertj:assertj-core:3.13.2" level="project" />
++    <orderEntry type="library" name="Maven: org.hamcrest:hamcrest:2.1" level="project" />
++    <orderEntry type="library" name="Maven: org.mockito:mockito-core:3.1.0" level="project" />
++    <orderEntry type="library" name="Maven: net.bytebuddy:byte-buddy:1.10.6" level="project" />
++    <orderEntry type="library" name="Maven: net.bytebuddy:byte-buddy-agent:1.10.6" level="project" />
++    <orderEntry type="library" name="Maven: org.objenesis:objenesis:2.6" level="project" />
++    <orderEntry type="library" name="Maven: org.skyscreamer:jsonassert:1.5.0" level="project" />
++    <orderEntry type="library" name="Maven: com.vaadin.external.google:android-json:0.0.20131108.vaadin1" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-core:5.2.3.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-jcl:5.2.3.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-test:5.2.3.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.xmlunit:xmlunit-core:2.6.3" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-json:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.10.2" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.10.2" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.10.2" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.10.2" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.10.2" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-parameter-names:2.10.2" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-tomcat:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:9.0.30" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-el:9.0.30" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-websocket:9.0.30" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-validation:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: jakarta.validation:jakarta.validation-api:2.0.2" level="project" />
++    <orderEntry type="library" name="Maven: org.hibernate.validator:hibernate-validator:6.0.18.Final" level="project" />
++    <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging:3.4.1.Final" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml:classmate:1.5.1" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-web:5.2.3.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-beans:5.2.3.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:5.2.3.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-aop:5.2.3.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-context:5.2.3.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.2.3.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5.5" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.13" level="project" />
++    <orderEntry type="library" name="Maven: commons-logging:commons-logging:1.2" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.7" level="project" />
++    <orderEntry type="library" name="Maven: commons-beanutils:commons-beanutils:1.9.3" level="project" />
++    <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.2.2" level="project" />
++    <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.13" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-thymeleaf:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-logging:2.2.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:1.2.3" level="project" />
++    <orderEntry type="library" name="Maven: ch.qos.logback:logback-core:1.2.3" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-to-slf4j:2.12.1" level="project" />
++    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-api:2.12.1" level="project" />
++    <orderEntry type="library" name="Maven: org.slf4j:jul-to-slf4j:1.7.30" level="project" />
++    <orderEntry type="library" name="Maven: jakarta.annotation:jakarta.annotation-api:1.3.5" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Maven: org.yaml:snakeyaml:1.25" level="project" />
++    <orderEntry type="library" name="Maven: org.thymeleaf:thymeleaf-spring5:3.0.11.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.thymeleaf:thymeleaf:3.0.11.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.attoparser:attoparser:2.0.5.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.unbescape:unbescape:1.1.6.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.30" level="project" />
++    <orderEntry type="library" name="Maven: org.thymeleaf.extras:thymeleaf-extras-java8time:3.0.4.RELEASE" level="project" />
++  </component>
++</module>
+\ No newline at end of file
+Index: gmall_parent/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gmall_parent/pom.xml	(date 1580788705471)
++++ gmall_parent/pom.xml	(date 1580788705471)
+@@ -0,0 +1,138 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0"
++         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
++    <modelVersion>4.0.0</modelVersion>
++
++    <groupId>com.lxkj.gmall</groupId>
++    <artifactId>gmall_parent</artifactId>
++    <version>1.0-SNAPSHOT</version>
++    <packaging>pom</packaging>
++
++    <parent>
++        <groupId>org.springframework.boot</groupId>
++        <artifactId>spring-boot-starter-parent</artifactId>
++        <version>2.2.4.RELEASE</version>
++    </parent>
++    <properties>
++        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
++        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
++        <java.version>1.8</java.version>
++        <fastjson.version>1.2.46</fastjson.version>
++        <dubbo-starter.version>1.0.10</dubbo-starter.version>
++        <dubbo.version>2.6.0</dubbo.version>
++        <zkclient.version>0.10</zkclient.version>
++        <mybatis.version>1.3.1</mybatis.version>
++        <nekohtml.version>1.9.20</nekohtml.version>
++        <xml-apis.version>1.4.01</xml-apis.version>
++        <batik-ext.version>1.9.1</batik-ext.version>
++        <jsoup.version>1.11.2</jsoup.version>
++        <httpclient.version>4.5.5</httpclient.version>
++        <commons-lang3.version>3.7</commons-lang3.version>
++        <mapper-starter.version>2.0.2</mapper-starter.version>
++        <jedis.version>2.9.0</jedis.version>
++        <jest.version>5.3.3</jest.version>
++        <jna.version>4.5.1</jna.version>
++        <beanUtils.version>1.9.3</beanUtils.version>
++    </properties>
++    <dependencyManagement>
++        <dependencies>
++            <dependency>
++                <groupId>com.alibaba</groupId>
++                <artifactId>fastjson</artifactId>
++                <version>${fastjson.version}</version>
++            </dependency>
++            <dependency>
++                <groupId>com.alibaba</groupId>
++                <artifactId>dubbo</artifactId>
++                <version>${dubbo.version}</version>
++            </dependency>
++            <dependency>
++                <groupId>com.101tec</groupId>
++                <artifactId>zkclient</artifactId>
++                <version>${zkclient.version}</version>
++            </dependency>
++            <dependency>
++                <groupId>com.gitee.reger</groupId>
++                <artifactId>spring-boot-starter-dubbo</artifactId>
++                <version>${dubbo-starter.version}</version>
++            </dependency>
++            <dependency>
++                <groupId>org.mybatis.spring.boot</groupId>
++                <artifactId>mybatis-spring-boot-starter</artifactId>
++                <version>${mybatis.version}</version>
++            </dependency>
++            <dependency>
++                <groupId>net.sourceforge.nekohtml</groupId>
++                <artifactId>nekohtml</artifactId>
++                <version>${nekohtml.version}</version>
++            </dependency>
++            <dependency>
++                <groupId>xml-apis</groupId>
++                <artifactId>xml-apis</artifactId>
++                <version>${xml-apis.version}</version>
++            </dependency>
++            <dependency>
++                <groupId>org.apache.xmlgraphics</groupId>
++                <artifactId>batik-ext</artifactId>
++                <version>${batik-ext.version}</version>
++            </dependency>
++            <!--   https://mvnrepository.com/artifact/org.jsoup/jsoup   -->
++            <dependency>
++                <groupId>org.jsoup</groupId>
++                <artifactId>jsoup</artifactId>
++                <version>${jsoup.version}</version>
++            </dependency>
++            <!--
++
++                       https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient
++
++           -->
++            <dependency>
++                <groupId>org.apache.httpcomponents</groupId>
++                <artifactId>httpclient</artifactId>
++                <version>${httpclient.version}</version>
++            </dependency>
++            <dependency>
++                <groupId>org.apache.commons</groupId>
++                <artifactId>commons-lang3</artifactId>
++                <version>${commons-lang3.version}</version>
++            </dependency>
++            <dependency>
++                <groupId>tk.mybatis</groupId>
++                <artifactId>mapper-spring-boot-starter</artifactId>
++                <version>${mapper-starter.version}</version>
++            </dependency>
++            <dependency>
++                <groupId>redis.clients</groupId>
++                <artifactId>jedis</artifactId>
++                <version>${jedis.version}</version>
++            </dependency>
++            <!--
++
++                       https://mvnrepository.com/artifact/io.searchbox/jest
++
++           -->
++            <dependency>
++                <groupId>io.searchbox</groupId>
++                <artifactId>jest</artifactId>
++                <version>${jest.version}</version>
++            </dependency>
++            <!--
++
++                       https://mvnrepository.com/artifact/net.java.dev.jna/jna
++
++           -->
++            <dependency>
++                <groupId>net.java.dev.jna</groupId>
++                <artifactId>jna</artifactId>
++                <version>${jna.version}</version>
++            </dependency>
++            <dependency>
++                <groupId>commons-beanutils</groupId>
++                <artifactId>commons-beanutils</artifactId>
++                <version>${beanUtils.version}</version>
++            </dependency>
++        </dependencies>
++    </dependencyManagement>
++</project>
+\ No newline at end of file
+Index: gmall_user/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gmall_user/pom.xml	(date 1580788218207)
++++ gmall_user/pom.xml	(date 1580788218207)
+@@ -0,0 +1,95 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
++    <modelVersion>4.0.0</modelVersion>
++
++    <groupId>com.lxkj.gmall</groupId>
++    <artifactId>gmall_user</artifactId>
++    <version>0.0.1-SNAPSHOT</version>
++    <name>gmall_user</name>
++    <description>Demo project for Spring Boot</description>
++
++    <properties>
++        <java.version>1.8</java.version>
++    </properties>
++    <parent>
++        <groupId>com.lxkj.gmall</groupId>
++        <artifactId>gmall_parent</artifactId>
++        <version>1.0-SNAPSHOT</version>
++    </parent>
++    <dependencies>
++        <dependency>
++            <groupId>com.lxkj.gmall</groupId>
++            <artifactId>gmall_servicer_util</artifactId>
++            <version>1.0-SNAPSHOT</version>
++        </dependency>
++        <dependency>
++            <groupId>com.lxkj.gmall</groupId>
++            <artifactId>gmall_web_util</artifactId>
++            <version>1.0-SNAPSHOT</version>
++        </dependency>
++        <dependency>
++            <groupId>com.lxkj.gmall</groupId>
++            <artifactId>gmall_api</artifactId>
++            <version>1.0-SNAPSHOT</version>
++        </dependency>
++        <dependency>
++            <groupId>org.projectlombok</groupId>
++            <artifactId>lombok</artifactId>
++            <optional>true</optional>
++        </dependency>
++        <dependency>
++            <groupId>org.springframework.boot</groupId>
++            <artifactId>spring-boot-starter-test</artifactId>
++            <scope>test</scope>
++            <exclusions>
++                <exclusion>
++                    <groupId>org.junit.vintage</groupId>
++                    <artifactId>junit-vintage-engine</artifactId>
++                </exclusion>
++            </exclusions>
++        </dependency>
++        <dependency>
++            <groupId>com.sun.xml.bind</groupId>
++            <artifactId>jaxb-core</artifactId>
++            <version>2.3.0</version>
++        </dependency>
++        <dependency>
++            <groupId>jakarta.persistence</groupId>
++            <artifactId>jakarta.persistence-api</artifactId>
++            <version>2.2.3</version>
++        </dependency>
++        <dependency>
++            <groupId>tk.mybatis</groupId>
++            <artifactId>mapper</artifactId>
++            <version>3.4.2</version>
++        </dependency>
++        <dependency>
++            <groupId>tk.mybatis</groupId>
++            <artifactId>mapper</artifactId>
++            <version>3.4.2</version>
++        </dependency>
++        <dependency>
++            <groupId>org.mybatis</groupId>
++            <artifactId>mybatis-spring</artifactId>
++            <version>2.0.3</version>
++            <scope>compile</scope>
++        </dependency>
++        <dependency>
++            <groupId>org.springframework</groupId>
++            <artifactId>spring-web</artifactId>
++            <version>5.2.2.RELEASE</version>
++            <scope>compile</scope>
++        </dependency>
++    </dependencies>
++
++    <build>
++        <plugins>
++            <plugin>
++                <groupId>org.springframework.boot</groupId>
++                <artifactId>spring-boot-maven-plugin</artifactId>
++            </plugin>
++        </plugins>
++    </build>
++
++</project>
+Index: gmall_api/src/main/java/com/lxkj/gmall/bean/UmsMemberReceiveAddress.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gmall_api/src/main/java/com/lxkj/gmall/bean/UmsMemberReceiveAddress.java	(date 1580722418975)
++++ gmall_api/src/main/java/com/lxkj/gmall/bean/UmsMemberReceiveAddress.java	(date 1580722418975)
+@@ -0,0 +1,99 @@
++package com.lxkj.gmall.bean;
++
++import javax.persistence.Id;
++import java.io.Serializable;
++
++public class UmsMemberReceiveAddress implements Serializable {
++
++    @Id
++    private String id;
++    private String memberId;
++    private String  name;
++    private String  phoneNumber;
++    private int defaultStatus;
++    private String postCode;
++    private String province;
++    private String city;
++    private String region;
++    private String detailAddress;
++
++    public String getId() {
++        return id;
++    }
++
++    public void setId(String id) {
++        this.id = id;
++    }
++
++    public String getMemberId() {
++        return memberId;
++    }
++
++    public void setMemberId(String memberId) {
++        this.memberId = memberId;
++    }
++
++    public String getName() {
++        return name;
++    }
++
++    public void setName(String name) {
++        this.name = name;
++    }
++
++    public String getPhoneNumber() {
++        return phoneNumber;
++    }
++
++    public void setPhoneNumber(String phoneNumber) {
++        this.phoneNumber = phoneNumber;
++    }
++
++    public int getDefaultStatus() {
++        return defaultStatus;
++    }
++
++    public void setDefaultStatus(int defaultStatus) {
++        this.defaultStatus = defaultStatus;
++    }
++
++    public String getPostCode() {
++        return postCode;
++    }
++
++    public void setPostCode(String postCode) {
++        this.postCode = postCode;
++    }
++
++    public String getProvince() {
++        return province;
++    }
++
++    public void setProvince(String province) {
++        this.province = province;
++    }
++
++    public String getCity() {
++        return city;
++    }
++
++    public void setCity(String city) {
++        this.city = city;
++    }
++
++    public String getRegion() {
++        return region;
++    }
++
++    public void setRegion(String region) {
++        this.region = region;
++    }
++
++    public String getDetailAddress() {
++        return detailAddress;
++    }
++
++    public void setDetailAddress(String detailAddress) {
++        this.detailAddress = detailAddress;
++    }
++}
+Index: gmall_api/src/main/java/com/lxkj/gmall/bean/UmsMember.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gmall_api/src/main/java/com/lxkj/gmall/bean/UmsMember.java	(date 1580722419076)
++++ gmall_api/src/main/java/com/lxkj/gmall/bean/UmsMember.java	(date 1580722419076)
+@@ -0,0 +1,181 @@
++package com.lxkj.gmall.bean;
++
++import javax.persistence.Id;
++import java.io.Serializable;
++import java.util.Date;
++
++public class UmsMember implements Serializable {
++
++    @Id
++    private String id;
++    private String         memberLevelId;
++    private String username;
++    private String         password;
++    private String nickname;
++    private String         phone;
++    private int status;
++    private Date createTime;
++    private String icon;
++    private int         gender;
++    private Date birthday;
++    private String        city;
++    private String job;
++    private String         personalizedSignature;
++    private int sourceType;
++    private int         integration;
++    private int growth;
++    private int         luckeyCount;
++    private int historyIntegration;
++
++    public String getId() {
++        return id;
++    }
++
++    public void setId(String id) {
++        this.id = id;
++    }
++
++    public String getMemberLevelId() {
++        return memberLevelId;
++    }
++
++    public void setMemberLevelId(String memberLevelId) {
++        this.memberLevelId = memberLevelId;
++    }
++
++    public String getUsername() {
++        return username;
++    }
++
++    public void setUsername(String username) {
++        this.username = username;
++    }
++
++    public String getPassword() {
++        return password;
++    }
++
++    public void setPassword(String password) {
++        this.password = password;
++    }
++
++    public String getNickname() {
++        return nickname;
++    }
++
++    public void setNickname(String nickname) {
++        this.nickname = nickname;
++    }
++
++    public String getPhone() {
++        return phone;
++    }
++
++    public void setPhone(String phone) {
++        this.phone = phone;
++    }
++
++    public int getStatus() {
++        return status;
++    }
++
++    public void setStatus(int status) {
++        this.status = status;
++    }
++
++    public Date getCreateTime() {
++        return createTime;
++    }
++
++    public void setCreateTime(Date createTime) {
++        this.createTime = createTime;
++    }
++
++    public String getIcon() {
++        return icon;
++    }
++
++    public void setIcon(String icon) {
++        this.icon = icon;
++    }
++
++    public int getGender() {
++        return gender;
++    }
++
++    public void setGender(int gender) {
++        this.gender = gender;
++    }
++
++    public Date getBirthday() {
++        return birthday;
++    }
++
++    public void setBirthday(Date birthday) {
++        this.birthday = birthday;
++    }
++
++    public String getCity() {
++        return city;
++    }
++
++    public void setCity(String city) {
++        this.city = city;
++    }
++
++    public String getJob() {
++        return job;
++    }
++
++    public void setJob(String job) {
++        this.job = job;
++    }
++
++    public String getPersonalizedSignature() {
++        return personalizedSignature;
++    }
++
++    public void setPersonalizedSignature(String personalizedSignature) {
++        this.personalizedSignature = personalizedSignature;
++    }
++
++    public int getSourceType() {
++        return sourceType;
++    }
++
++    public void setSourceType(int sourceType) {
++        this.sourceType = sourceType;
++    }
++
++    public int getIntegration() {
++        return integration;
++    }
++
++    public void setIntegration(int integration) {
++        this.integration = integration;
++    }
++
++    public int getGrowth() {
++        return growth;
++    }
++
++    public void setGrowth(int growth) {
++        this.growth = growth;
++    }
++
++    public int getLuckeyCount() {
++        return luckeyCount;
++    }
++
++    public void setLuckeyCount(int luckeyCount) {
++        this.luckeyCount = luckeyCount;
++    }
++
++    public int getHistoryIntegration() {
++        return historyIntegration;
++    }
++
++    public void setHistoryIntegration(int historyIntegration) {
++        this.historyIntegration = historyIntegration;
++    }
++}
+Index: gmall_user/src/main/java/com/lxkj/gmall/gmall_user/GmallUserApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gmall_user/src/main/java/com/lxkj/gmall/gmall_user/GmallUserApplication.java	(date 1580788160790)
++++ gmall_user/src/main/java/com/lxkj/gmall/gmall_user/GmallUserApplication.java	(date 1580788160790)
+@@ -0,0 +1,15 @@
++package com.lxkj.gmall.gmall_user;
++
++import org.mybatis.spring.annotation.MapperScan;
++import org.springframework.boot.SpringApplication;
++import org.springframework.boot.autoconfigure.SpringBootApplication;
++
++@SpringBootApplication
++@MapperScan(basePackages= "com.lxkj.gmall.gmall_user.mapper")
++public class GmallUserApplication {
++
++    public static void main(String[] args) {
++        SpringApplication.run(GmallUserApplication.class, args);
++    }
++
++}
+Index: gmall_user_service/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gmall_user_service/pom.xml	(date 1580787368548)
++++ gmall_user_service/pom.xml	(date 1580787368548)
+@@ -0,0 +1,49 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
++    <modelVersion>4.0.0</modelVersion>
++    <parent>
++        <groupId>org.springframework.boot</groupId>
++        <artifactId>spring-boot-starter-parent</artifactId>
++        <version>2.2.4.RELEASE</version>
++        <relativePath/> <!-- lookup parent from repository -->
++    </parent>
++    <groupId>com.lxkj.gmall</groupId>
++    <artifactId>gmall_user_service</artifactId>
++    <version>0.0.1-SNAPSHOT</version>
++    <name>gmall_user_service</name>
++    <description>Demo project for Spring Boot</description>
++
++    <properties>
++        <java.version>1.8</java.version>
++    </properties>
++
++    <dependencies>
++        <dependency>
++            <groupId>org.springframework.boot</groupId>
++            <artifactId>spring-boot-starter</artifactId>
++        </dependency>
++
++        <dependency>
++            <groupId>org.springframework.boot</groupId>
++            <artifactId>spring-boot-starter-test</artifactId>
++            <scope>test</scope>
++            <exclusions>
++                <exclusion>
++                    <groupId>org.junit.vintage</groupId>
++                    <artifactId>junit-vintage-engine</artifactId>
++                </exclusion>
++            </exclusions>
++        </dependency>
++    </dependencies>
++
++    <build>
++        <plugins>
++            <plugin>
++                <groupId>org.springframework.boot</groupId>
++                <artifactId>spring-boot-maven-plugin</artifactId>
++            </plugin>
++        </plugins>
++    </build>
++
++</project>
+Index: gmall_api/src/main/java/com/lxkj/gmall/service/UmsMemberReceiveAddressService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gmall_api/src/main/java/com/lxkj/gmall/service/UmsMemberReceiveAddressService.java	(date 1580724971949)
++++ gmall_api/src/main/java/com/lxkj/gmall/service/UmsMemberReceiveAddressService.java	(date 1580724971949)
+@@ -0,0 +1,8 @@
++package com.lxkj.gmall.service;
++import com.lxkj.gmall.bean.UmsMemberReceiveAddress;
++import java.util.List;
++
++public interface UmsMemberReceiveAddressService {
++
++    List<UmsMemberReceiveAddress> getUserAll();
++}
+Index: gmall_user/src/test/java/com/lxkj/gmall/gmall_user/GmallUserApplicationTests.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gmall_user/src/test/java/com/lxkj/gmall/gmall_user/GmallUserApplicationTests.java	(date 1580787353486)
++++ gmall_user/src/test/java/com/lxkj/gmall/gmall_user/GmallUserApplicationTests.java	(date 1580787353486)
+@@ -0,0 +1,13 @@
++package com.lxkj.gmall.gmall_user;
++
++import org.junit.jupiter.api.Test;
++import org.springframework.boot.test.context.SpringBootTest;
++
++@SpringBootTest
++class GmallUserApplicationTests {
++
++    @Test
++    void contextLoads() {
++    }
++
++}
+Index: demo/src/test/java/com/lxkj/gmall/demo/DemoApplicationTests.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- demo/src/test/java/com/lxkj/gmall/demo/DemoApplicationTests.java	(date 1580787127641)
++++ demo/src/test/java/com/lxkj/gmall/demo/DemoApplicationTests.java	(date 1580787127641)
+@@ -0,0 +1,13 @@
++package com.lxkj.gmall.demo;
++
++import org.junit.jupiter.api.Test;
++import org.springframework.boot.test.context.SpringBootTest;
++
++@SpringBootTest
++class DemoApplicationTests {
++
++    @Test
++    void contextLoads() {
++    }
++
++}
+Index: demo/src/main/java/com/lxkj/gmall/demo/DemoApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- demo/src/main/java/com/lxkj/gmall/demo/DemoApplication.java	(date 1580787127631)
++++ demo/src/main/java/com/lxkj/gmall/demo/DemoApplication.java	(date 1580787127631)
+@@ -0,0 +1,13 @@
++package com.lxkj.gmall.demo;
++
++import org.springframework.boot.SpringApplication;
++import org.springframework.boot.autoconfigure.SpringBootApplication;
++
++@SpringBootApplication
++public class DemoApplication {
++
++    public static void main(String[] args) {
++        SpringApplication.run(DemoApplication.class, args);
++    }
++
++}
+Index: demo/src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>GBK
+===================================================================
+--- demo/src/main/resources/application.properties	(date 1580787120782)
++++ demo/src/main/resources/application.properties	(date 1580787120782)
+@@ -0,0 +1,1 @@
++
+Index: gmall_servicer_util/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gmall_servicer_util/pom.xml	(date 1580788607471)
++++ gmall_servicer_util/pom.xml	(date 1580788607471)
+@@ -0,0 +1,42 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0"
++         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
++    <modelVersion>4.0.0</modelVersion>
++
++    <groupId>com.lxkj.gmall</groupId>
++    <artifactId>gmall_servicer_util</artifactId>
++    <version>1.0-SNAPSHOT</version>
++
++    <parent>
++        <groupId>com.lxkj.gmall</groupId>
++        <artifactId>gmall_parent</artifactId>
++        <version>1.0-SNAPSHOT</version>
++    </parent>
++
++    <dependencies>
++        <dependency>
++            <groupId>com.lxkj.gmall</groupId>
++            <artifactId>gmall_common_util</artifactId>
++            <version>1.0-SNAPSHOT</version>
++        </dependency>
++        <dependency>
++            <groupId>org.springframework.boot</groupId>
++            <artifactId>spring-boot-starter-jdbc</artifactId>
++        </dependency>
++        <dependency>
++            <groupId>org.mybatis.spring.boot</groupId>
++            <artifactId>mybatis-spring-boot-starter</artifactId>
++            <version>2.1.1</version>
++        </dependency>
++        <dependency>
++            <groupId>mysql</groupId>
++            <artifactId>mysql-connector-java</artifactId>
++            <scope>runtime</scope>
++        </dependency>
++        <dependency>
++            <groupId>redis.clients</groupId>
++            <artifactId>jedis</artifactId>
++        </dependency>
++    </dependencies>
++</project>
+\ No newline at end of file
+Index: gmall_user/src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>GBK
+===================================================================
+--- gmall_user/src/main/resources/application.properties	(date 1580782298406)
++++ gmall_user/src/main/resources/application.properties	(date 1580782298406)
+@@ -0,0 +1,10 @@
++server.port=8080
++
++spring.datasource.url=jdbc:mysql://localhost:3306/gmall?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
++spring.datasource.username=root
++spring.datasource.password=root
++
++mybatis.mapper-locations=classpath:mapper/*Mapper.xml
++mybatis.configuration.map-underscore-to-camel-case=true
++
++#logging.level.root=debug
+\ No newline at end of file
+Index: gmall_user_service/src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>GBK
+===================================================================
+--- gmall_user_service/src/main/resources/application.properties	(date 1580787367413)
++++ gmall_user_service/src/main/resources/application.properties	(date 1580787367413)
+@@ -0,0 +1,1 @@
++
+Index: gmall_user_service/src/main/java/com/lxkj/gmall/gmall_user_service/GmallUserServiceApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gmall_user_service/src/main/java/com/lxkj/gmall/gmall_user_service/GmallUserServiceApplication.java	(date 1580787370273)
++++ gmall_user_service/src/main/java/com/lxkj/gmall/gmall_user_service/GmallUserServiceApplication.java	(date 1580787370273)
+@@ -0,0 +1,13 @@
++package com.lxkj.gmall.gmall_user_service;
++
++import org.springframework.boot.SpringApplication;
++import org.springframework.boot.autoconfigure.SpringBootApplication;
++
++@SpringBootApplication
++public class GmallUserServiceApplication {
++
++    public static void main(String[] args) {
++        SpringApplication.run(GmallUserServiceApplication.class, args);
++    }
++
++}
+Index: gmall_user/src/main/resources/mapper/UmsMemberReceiveAddressMapper.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gmall_user/src/main/resources/mapper/UmsMemberReceiveAddressMapper.xml	(date 1580724404511)
++++ gmall_user/src/main/resources/mapper/UmsMemberReceiveAddressMapper.xml	(date 1580724404511)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
++        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
++<mapper namespace="com.lxkj.gmall.gmall_user.mapper.UmsMemberReceiveAddressMapper">
++    <select id="getUserAll" resultType="com.lxkj.gmall.bean.UmsMemberReceiveAddress">
++        select * from ums_member_receive_address
++    </select>
++</mapper>
+\ No newline at end of file
