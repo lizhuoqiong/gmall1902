@@ -1,4 +1,4 @@
-package com.lxkj.gmall.gmall_user.mapper;
+package com.lxkj.gmall.gmall_user_service.mapper;
 
 
 import com.lxkj.gmall.bean.UmsMemberReceiveAddress;

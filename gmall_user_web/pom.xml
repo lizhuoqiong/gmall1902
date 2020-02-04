@@ -2,10 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>com.lxkj.gmall</groupId>
-    <artifactId>gmall_user_service</artifactId>
+    <artifactId>gmall_user_web</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>gmall_user_service</name>
+    <name>gmall_user_web</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -21,7 +22,7 @@
     <dependencies>
         <dependency>
             <groupId>com.lxkj.gmall</groupId>
-            <artifactId>gmall_servicer_util</artifactId>
+            <artifactId>gmall_web_util</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 

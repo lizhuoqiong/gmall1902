@@ -1,11 +1,10 @@
-package com.lxkj.gmall.gmall_user_service;
-
+package com.lxkj.gmall.gmall_user_web;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class GmallUserServiceApplicationTests {
+class GmallUserWebApplicationTests {
 
     @Test
     void contextLoads() {
