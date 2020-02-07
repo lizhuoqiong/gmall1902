@@ -6,7 +6,6 @@ import com.lxkj.gmall.gmall_user_service.mapper.UmsMemberReceiveAddressMapper;
 import com.lxkj.gmall.service.UmsMemberReceiveAddressService;
 import org.springframework.stereotype.Service;
 
-
 import javax.annotation.Resource;
 import java.util.List;
 
@@ -14,10 +13,11 @@ import java.util.List;
 public class UmsMemberReceiveAddressServiceImpl implements UmsMemberReceiveAddressService {
 
     @Resource
-    private UmsMemberReceiveAddressMapper umsMemberReceiveAddressMapper;
+    UmsMemberReceiveAddressMapper umsMemberReceiveAddressMapper;
 
     @Override
     public List<UmsMemberReceiveAddress> getUserAll() {
+
         return umsMemberReceiveAddressMapper.getUserAll();
     }
 }

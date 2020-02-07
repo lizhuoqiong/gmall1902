@@ -1,8 +1,11 @@
 package com.lxkj.gmall.service;
 import com.lxkj.gmall.bean.UmsMemberReceiveAddress;
+import tk.mybatis.mapper.common.Mapper;
+
 import java.util.List;
 
 public interface UmsMemberReceiveAddressService {
 
-    List<UmsMemberReceiveAddress> getUserAll();
+    public List<UmsMemberReceiveAddress> getUserAll();
+
 }
